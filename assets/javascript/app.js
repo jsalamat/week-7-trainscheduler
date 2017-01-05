@@ -1,11 +1,4 @@
-
-// 2. Create button for adding new employees - then update the html + update the database
-// 3. Create a way to retrieve employees from the employee database.
-// 4. Create a way to calculate the months worked. Using difference between start and current time.
-//    Then use moment.js formatting to set difference in months.
-// 5. Calculate Total billed
-
-// Initialize Firebase
+// 1. Initialize Firebase
 var config = {
     apiKey: "AIzaSyCCKh3qvjQGAoLefMJZGGQGrIuUjdsZkHw",
     authDomain: "week-7-trainscheduler.firebaseapp.com",
@@ -29,7 +22,7 @@ $("#add-train-btn").on("click", function() {
   //using moment.js to grab start date, trim it, format it to DD/MM/YY then reformat it to "X" which is a timestamp
   var trainFrequency = $("#frequency-input").val().trim();
 
-  // Creates local "temporary" object for holding employee data
+  // Creates local "temporary" object for holding Train data
   // creating a new object to incorporate the variable above, new object to incoparate new key to be equal to variable
   var newTrain = {
     name: trainName,
@@ -82,18 +75,31 @@ database.ref().on("child_added", function(childSnapshot, prevChildKey) {
   console.log(trainFrequency);
 
 
+  var firstTimeConverted = moment(trainFirst, "hh:mm").subtract(1, "years");
+      console.log(firstTimeConverted);
 
+      // Current Time
+      var currentTime = moment();
+      console.log("CURRENT TIME: " + moment(currentTime).format("hh:mm"));
+
+      // Difference between the times
+      var diffTime = moment().diff(moment(firstTimeConverted), "minutes");
+      console.log("DIFFERENCE IN TIME: " + diffTime);
+ 
+      // Time apart (remainder)
+      var tRemainder = diffTime % trainFrequency;
+      console.log(tRemainder);
+ 
+      // Minute Until Train
+      var tMinutesTillTrain = trainFrequency - tRemainder;
+      console.log("MINUTES TILL TRAIN: " + tMinutesTillTrain);
+ 
+      // Next Train
+      var nextTrain = moment().add(tMinutesTillTrain, "minutes").format("hh:mm A");
+      console.log("ARRIVAL TIME: " + moment(nextTrain).format("hh:mm A"));
 
   // Add each train's data into the table
   //adding a row to the tbody
   $("#train-table > tbody").append("<tr><td>" + trainName + "</td><td>" + trainDestination + "</td><td>" +
   trainFrequency + "</td><td>" + nextTrain + "</td><td>" + tMinutesTillTrain + "</td></tr>");
 });
-
-// Example Time Math
-// -----------------------------------------------------------------------------
-// Assume Employee start date of January 1, 2015
-// Assume current date is March 1, 2016
-
-// We know that this is 15 months.
-// Now we will create code in moment.js to confirm that any attempt we use mets this test case
