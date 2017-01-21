@@ -1,139 +1,197 @@
 #header {
-                height: 200px;
-            	background-color: #021372;
-                text-align: center;
-            }
+	background-color: #021372;
+    background: url(../images/2qm47li0w1c-nicolai-berntsen.jpg) no-repeat center center;
+    background-size: cover;
+    height: 200px;
+    max-width: 100%;
+    text-align: center;
+    margin: 0;
+    position: relative;
+    border-bottom: 4px solid #021372;
+}
 
-            #header h1 {
-            	font-size: 65px;
-                letter-spacing: 3px;
-                line-height: 200px;
-                font-weight: bold;
-                color: #ffffff;
-            }
+#header h1 {
+	font-size: 80px;
+    font-style: italic;
+    font-weight: bold;
+    color: #ffffff;
+    position: absolute;
+    bottom: -216px;
+    text-align: center;
+    text-shadow: 6px 0px #021372;
+    margin: 0 auto;
+}
 
-            #maincontent {
-                border: 2px solid #ccc;
-                margin-top: 20px;
-            }
+.jumbotron {
+    background-color: #021372;
+    background: url(../images/bks_meifxrzik-mario-calvo.jpg) no-repeat center center;
+    background-size: cover;
+    margin: 0;
+    max-height: 100%;
+    max-width: 100%;
+}
 
-            .panel panel-primary {
-                background-color: #00436b;
-                margin: 0;
-                height: 60px;
-            }
+.panel-primary>.panel-heading {
+     background-image: -webkit-linear-gradient(top,#021372 0,#021372 100%); 
+    background-image: -o-linear-gradient(top,#021372 0,#021372 100%);
+     background-image: -webkit-gradient(linear,left top,left bottom,from(#021372),to(#021372)); 
+     background-image: linear-gradient(to bottom,#021372 0,#021372 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff337ab7', endColorstr='#ff2e6da4', GradientType=0);
+    background-repeat: repeat-x;
+}
 
-            .panel panel-primary h3 {
-                color: #ffffff; 
-                font-size: 24px;
-                padding: 12px;
-                margin: 0;
+.panel-primary>.panel-heading {
+    color: #ffffff;
+    background-color: #021372;
+    border-color: #5bc0de;
+}
 
-            }
+#maincontent {
+    border: 2px solid #ccc;
+    margin-top: 20px;
+}
 
-            #data-content {
-                border: 2px solid #ccc;
-                margin-top: 20px;
-            }
+.panel panel-primary {
+    background-color: #00436b;
+    margin: 0;
+    height: 60px;
+}
 
-            .page-header2 {
-                background-color: #00436b;
-                margin: 0;
-                height: 60px;
-            }
+.panel panel-primary h3 {
+    color: #ffffff; 
+    font-size: 24px;
+    padding: 12px;
+    margin: 0;
 
-            .page-header2 h2 {
-                color: #ffffff; 
-                font-size: 24px;
-                padding: 12px;
-                margin: 0;
+}
 
-            }
+#data-content {
+    border: 2px solid #ccc;
+    margin-top: 20px;
+}
 
+.page-header2 {
+    background-color: #00436b;
+    margin: 0;
+    height: 60px;
+}
 
-            form {
-              margin:20px;
-            }
+.page-header2 h2 {
+    color: #ffffff; 
+    font-size: 24px;
+    padding: 12px;
+    margin: 0;
+}
 
-            input[type=text] {
-              width: 100%;
-                padding: 12px;
-                margin: 10px 0;
-                display: inline-block;
-                border: 2px solid #ccc;
-                border-radius: 4px;
-                box-sizing: border-box;
-                font-size: 16px;
-                outline: none;
-                box-shadow: 4px 4px 2px #bcbcbc;
-            }
+form {
+  margin:20px;
+}
 
-            input[type=text]:focus {
-                border: 2.5px solid #021372;
-                transition: border 1s;
-            }
+input[type=text] {
+  width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    display: inline-block;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    outline: none;
+    box-shadow: 4px 4px 2px #bcbcbc;
+}
 
-               input[type=number] {
-              width: 100%;
-                padding: 12px;
-                margin: 10px 0;
-                display: inline-block;
-                border: 2px solid #ccc;
-                border-radius: 4px;
-                box-sizing: border-box;
-                font-size: 16px;
-                outline: none;
-                box-shadow: 4px 4px 2px #bcbcbc;
-            }
+input[type=text]:focus {
+    border: 2.5px solid #021372;
+    transition: border 1s;
+}
 
-            input[type=number]:focus {
-                border: 2.5px solid #021372;
-                transition: border 1s;
-            }
+   input[type=number] {
+  width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    display: inline-block;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    outline: none;
+    box-shadow: 4px 4px 2px #bcbcbc;
+}
 
-            label {
-              font-size: 18px;
-                position: relative;
-                top: 5px;
-                color: #021372;
-            }
+input[type=number]:focus {
+    border: 2.5px solid #021372;
+    transition: border 1s;
+}
 
-            input[type=submit] {
-                background-color: #888888;
-                border: none;
-                color: #ffffff;
-                font-size: 18px;
-                letter-spacing: 1px;
-                padding: 16px 32px;
-                text-decoration: none;
-                margin: 15px 2px 50px 2px;
-                border-radius: 10px;
-                cursor: pointer;
-                box-shadow: 4px 4px 2px #bcbcbc;
-            }
+label {
+  font-size: 18px;
+    position: relative;
+    top: 5px;
+    color: #021372;
+}
 
-            input[type=submit]:hover {
-                background-color: #021372;
-                color: #ffffff;
-                transition: background-color 1s, color 1s;
-            }
+input[type=submit] {
+    background-color: #888888;
+    border: none;
+    color: #ffffff;
+    font-size: 18px;
+    letter-spacing: 1px;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 15px 2px 50px 2px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 4px 4px 2px #bcbcbc;
+}
 
-            button#clearview {
-                background-color: #888888;
-                border: none;
-                color: #ffffff;
-                font-size: 18px;
-                letter-spacing: 1px;
-                padding: 16px 32px;
-                text-decoration: none;
-                margin: 15px 2px 50px 2px;
-                border-radius: 10px;
-                cursor: pointer;
-                box-shadow: 4px 4px 2px #bcbcbc;
-            }
+input[type=submit]:hover {
+    background-color: #021372;
+    color: #ffffff;
+    transition: background-color 1s, color 1s;
+}
 
-            button#clearview:hover {
-                background-color: #021372;
-                color: #ffffff;
-                transition: background-color 1s, color 1s;
-            }
+.panel-primary {
+    border-color: #021372;
+}
+
+.panel {
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid transparent #021372;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+
+#footer, .push {
+  margin: 0px 0 0 0; 
+  background: #808080;
+  height: 100px;
+}
+
+#footer p {
+  color: #000000;
+  font-size: 18px;
+  line-height: 100px;
+  margin: 0;
+}
+
+/*.btn-primary:hover {
+    color: #fff;
+    background-color: #fff;
+    border-color: #fff;
+}
+.btn.focus, .btn:focus, .btn:hover {
+    color: #333;
+    text-decoration: none;
+}
+.btn-primary {
+    background-image: -webkit-linear-gradient(top,#808080 0,#021372 100%);
+    background-image: -o-linear-gradient(top,#337ab7 0,#265a88 100%);
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#0b257e),to(#265a88));
+    background-image: linear-gradient(to bottom,#efebea 0,#021372 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff337ab7', endColorstr='#ff265a88', GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+    background-repeat: repeat-x;
+    border-color: #245580;
+}*/
